@@ -2,7 +2,7 @@
   "name": "weathery",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://MaxDemydenko.github.io/weathery",
+  "homepage": "https://maxdemydenko.github.io/weathery",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
