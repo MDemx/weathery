@@ -1,0 +1,11 @@
+.date {
+    margin-top: -3%;
+    font-size: 1.4em;
+}
+
+
+@media screen and (max-width: 800px) {
+    .date {
+        margin-top: 1%;
+    }
+}

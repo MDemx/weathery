@@ -1,0 +1,14 @@
+.forecastWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #bdbdbd;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+.forecastWrapper p {
+    margin: 5px;
+}
