@@ -7,7 +7,6 @@ import Clear from "../../../assets/videos/sunny.mp4"
 import Rain from "../../../assets/videos/Rain.mp4"
 import {useSelector} from "react-redux";
 import {getCurrentTime} from "../../../Selectors/currentDayTimeSelectors";
-import Preloader from "../Preloader/Preloader";
 
 export const CurrentWeatherVideo = ({weather}) => {
 
@@ -30,6 +29,6 @@ export const CurrentWeatherVideo = ({weather}) => {
             </video>
         }
     } else {
-        return <Preloader/>
+        return null;
     }
 }

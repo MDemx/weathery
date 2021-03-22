@@ -2,13 +2,12 @@ import React, {useEffect} from 'react'
 import {WeekForecastItem} from "./WeekForecastItem/WeekForecastItem";
 import s from "./WeekForecastItems.module.css";
 import {useDispatch, useSelector} from "react-redux";
-import {getIsFetching, getWeekForecastData} from "../../Selectors/weekForecastSelectors";
+import {getWeekForecastData} from "../../Selectors/weekForecastSelectors";
 import {getUserCoordsLat, getUserCoordsLon} from "../../Selectors/userLocationSelectors";
 import {getCurrentDay} from "../../Selectors/currentDayTimeSelectors";
 import {getForecast} from "../../redux/forecastReducer";
-import Preloader from "../common/Preloader/Preloader";
 
-export const WeekForecastItems = (props) => {
+export const WeekForecastItems = ({dayNum, days}) => {
 
     const userCoordLat = useSelector(getUserCoordsLat)
     const userCoordLon = useSelector(getUserCoordsLon)
@@ -24,17 +23,6 @@ export const WeekForecastItems = (props) => {
         callGetForecast(userCoordLat, userCoordLon, currentDay)
     }, [userCoordLat, userCoordLon, currentDay])
 
-    const today = new Date()
-    let dayNum = today.getDay()
-
-    let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-
-  /*  const isFetching = useSelector(getIsFetching)
-
-    if (isFetching) {
-        return <Preloader/>
-    }
-*/
     return <div className={s.forecastItemsWrapper}>
         <h2>Weekly forecast</h2>
         <div>

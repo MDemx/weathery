@@ -4,12 +4,15 @@ import {useDispatch, useSelector} from "react-redux";
 import {getError, getUserCity, getUserCountry} from "../../../Selectors/userLocationSelectors";
 import {getUserCoords, setError} from "../../../redux/userLocationReducer";
 import {ErrorPopUp} from "../../common/ErrorPopUp/ErrorPopUp";
+import {getWeekForecastData} from "../../../Selectors/weekForecastSelectors";
 
 export const CurrentPlace = (props) => {
 
     const userCity = useSelector(getUserCity)
     const userCountry = useSelector(getUserCountry)
     const error = useSelector(getError)
+    const forecast = useSelector(getWeekForecastData)
+
 
     const dispatch = useDispatch()
 
@@ -17,11 +20,10 @@ export const CurrentPlace = (props) => {
         dispatch(getUserCoords());
     }
     const callSetError = (error) => {
-        debugger
         dispatch(setError(error));
     }
 
-    if (!userCity) {
+    if (!userCity && !forecast) {
         callSetError("Unable to load data from gh-pages")
     }
 
@@ -31,7 +33,7 @@ export const CurrentPlace = (props) => {
 
     return <div>
         <p className={s.place}>{userCity}, {userCountry}</p>
-        {error &&
+        {(error && error.length > 0) &&
             <ErrorPopUp errorText={error}/>
         }
     </div>
