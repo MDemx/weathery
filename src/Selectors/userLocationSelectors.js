@@ -10,4 +10,7 @@ export const getUserCoordsLat = (state) => {
 export const getUserCoordsLon = (state) => {
     return state.userLocation.lon
 }
+export const getError = (state) => {
+    return state.userLocation.error
+}
 

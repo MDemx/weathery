@@ -1,7 +1,5 @@
 import {getUserCoords} from "./userLocationReducer";
 import {getForecast} from "./forecastReducer";
-import {getUserCurrentWeather} from "./userCurrentWeatherReducer";
-import {setCurrentDayTime} from "./currentDayTimeReducer";
 
 const INITIALIZE = 'app/INITIALIZE'
 
@@ -22,8 +20,8 @@ export const initializeSuccess = () => ({
     type: INITIALIZE,
 })
 
-export const initializeApp = (lat, lon, currentDay, userCity, today) => (dispatch) => {
-    let promise = [dispatch(getUserCoords(lat, lon)), dispatch(getForecast(lat, lon, currentDay)), dispatch(getUserCurrentWeather(userCity)), setCurrentDayTime(today)]
+export const initializeApp = (lat, lon, currentDay) => (dispatch) => {
+    let promise = [dispatch(getUserCoords(lat, lon)), dispatch(getForecast(lat, lon, currentDay))]
 
     Promise.all([promise])
         .then( () => {

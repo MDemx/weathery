@@ -14,7 +14,6 @@ export const App = () => {
 
     const isInitialized = useSelector(getInitializedStatus)
     const currentWeatherDescription = useSelector(getCurrentWeatherDescription)
-    const currentTime = useSelector(getCurrentTime);
 
     const dispatch = useDispatch()
     const callInitializeApp = () => {
@@ -23,7 +22,7 @@ export const App = () => {
 
     useEffect(() => {
         callInitializeApp()
-    }, [])
+    }, [isInitialized])
 
 
     if (!isInitialized) {

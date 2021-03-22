@@ -7,3 +7,6 @@ export const getCurrentDate = (state) => {
 export const getCurrentTime = (state) => {
     return state.currentDayTime.time
 }
+export const getIsFetching = (state) => {
+    return state.currentDayTime.isFetching
+}

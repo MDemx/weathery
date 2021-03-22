@@ -23,9 +23,10 @@ export const CurrentWeatherVideo = ({weather}) => {
             </video>
         } else {
             return <video autoPlay muted loop id={s.myVideo}>
-                {weather === "Clouds" && <source src={Clouds} type="video/mp4"/>}
+                <source src={Clear} type="video/mp4"/>
+                {/*{weather === "Clouds" && <source src={Clouds} type="video/mp4"/>}
                 {weather === "Clear" && <source src={Clear} type="video/mp4"/>}
-                {weather === "Rain" && <source src={Rain} type="video/mp4"/>}
+                {weather === "Rain" && <source src={Rain} type="video/mp4"/>}*/}
             </video>
         }
     } else {

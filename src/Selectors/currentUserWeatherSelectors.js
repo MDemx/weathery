@@ -5,3 +5,7 @@ export const getCurrentTemperature = (state) => {
 export const getCurrentWeatherDescription = (state) => {
     return state.userCurrentWeather.currentWeatherDescription
 }
+
+export const getIsFetching = (state) => {
+    return state.userCurrentWeather.isFetching
+}
