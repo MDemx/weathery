@@ -22,7 +22,7 @@ export const CurrentPlace = (props) => {
     }
 
     if (!userCity) {
-        callSetError("Unable to load data from github pages")
+        callSetError("Unable to load data from gh-pages")
     }
 
     useEffect(() => {
