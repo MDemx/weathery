@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/weathery/static/css/main.1a085d61.chunk.css",
+    "main.css": "/weathery/static/css/main.1fb5371d.chunk.css",
     "main.js": "/weathery/static/js/main.32ace8e6.chunk.js",
     "main.js.map": "/weathery/static/js/main.32ace8e6.chunk.js.map",
     "runtime-main.js": "/weathery/static/js/runtime-main.3b2e5c51.js",
@@ -10,7 +10,7 @@
     "static/js/3.8546feea.chunk.js": "/weathery/static/js/3.8546feea.chunk.js",
     "static/js/3.8546feea.chunk.js.map": "/weathery/static/js/3.8546feea.chunk.js.map",
     "index.html": "/weathery/index.html",
-    "static/css/main.1a085d61.chunk.css.map": "/weathery/static/css/main.1a085d61.chunk.css.map",
+    "static/css/main.1fb5371d.chunk.css.map": "/weathery/static/css/main.1fb5371d.chunk.css.map",
     "static/js/2.2c81a031.chunk.js.LICENSE.txt": "/weathery/static/js/2.2c81a031.chunk.js.LICENSE.txt",
     "static/media/Clouds.fd064f2a.mp4": "/weathery/static/media/Clouds.fd064f2a.mp4",
     "static/media/Rain.e0606565.mp4": "/weathery/static/media/Rain.e0606565.mp4",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.3b2e5c51.js",
     "static/js/2.2c81a031.chunk.js",
-    "static/css/main.1a085d61.chunk.css",
+    "static/css/main.1fb5371d.chunk.css",
     "static/js/main.32ace8e6.chunk.js"
   ]
 }
