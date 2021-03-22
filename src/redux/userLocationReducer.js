@@ -17,19 +17,21 @@ let initialState = {
 export const userLocationReducer = (state = initialState, action) => {
     switch (action.type) {
         case GET_USER_CITY:
-            return { ...state, userCity: action.userCity, userCountry: action.userCountry }
+            return {...state, userCity: action.userCity, userCountry: action.userCountry}
         case GET_USER_COORDS:
-            return { ...state,  lat: action.lat, lon: action.lon}
+            return {...state, lat: action.lat, lon: action.lon}
         case TOGGLE_FETCHING:
             return {...state, isFetching: action.isFetching}
+        case SET_ERROR:
+            return {...state, error: action.error}
         default:
             return state
     }
 }
 
-export const setError = (isFetching) => ({
-    type: TOGGLE_FETCHING,
-    isFetching
+export const setError = (error) => ({
+    type: SET_ERROR,
+    error
 })
 
 export const toggleFetching = (error) => ({
@@ -39,7 +41,7 @@ export const toggleFetching = (error) => ({
 
 export const getUserCitySuccess = (userCity, userCountry) => ({
     type: GET_USER_CITY,
-        userCity, userCountry
+    userCity, userCountry
 })
 export const getUserCoordsSuccess = (lat, lon) => ({
     type: GET_USER_COORDS,
@@ -47,7 +49,7 @@ export const getUserCoordsSuccess = (lat, lon) => ({
 })
 
 export const getUserCoords = () => (dispatch) => {
-    navigator.geolocation.getCurrentPosition(function(position) {
+    navigator.geolocation.getCurrentPosition(function (position) {
         dispatch(getUserLocation(position.coords.latitude, position.coords.longitude))
         dispatch(getUserCoordsSuccess(position.coords.latitude, position.coords.longitude))
     });
@@ -63,7 +65,7 @@ export const getUserLocation = (latitude, longitude) => async (dispatch) => {
         const userCity = userLocation.town || userLocation.village || userLocation.municipality
 
         dispatch(getUserCitySuccess(userCity, userCountry));
-    } catch(error) {
+    } catch (error) {
         console.log("Some error occured");
     }
     dispatch(toggleFetching(false))

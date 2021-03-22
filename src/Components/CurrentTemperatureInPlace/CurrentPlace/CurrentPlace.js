@@ -17,6 +17,7 @@ export const CurrentPlace = (props) => {
         dispatch(getUserCoords());
     }
     const callSetError = (error) => {
+        debugger
         dispatch(setError(error));
     }
 
@@ -31,7 +32,7 @@ export const CurrentPlace = (props) => {
     return <div>
         <p className={s.place}>{userCity}, {userCountry}</p>
         {error &&
-            <ErrorPopUp error={error}/>
+            <ErrorPopUp errorText={error}/>
         }
     </div>
 }
