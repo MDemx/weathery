@@ -1,5 +1,6 @@
 .errorTextWrapper {
     padding: 10px;
+    width: 25%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,4 +22,14 @@
 .errorTextWrapper .errorText {
     font-size: 1.1em;
     color: #da4453;
+}
+
+@media screen and (max-width: 800px) {
+    .errorTextWrapper {
+        min-width: 40%;
+        left: 50%;
+    }
+    .errorTextWrapper .errorIcon {
+        width: 100px;
+    }
 }
