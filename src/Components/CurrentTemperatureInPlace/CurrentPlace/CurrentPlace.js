@@ -21,7 +21,7 @@ export const CurrentPlace = (props) => {
         dispatch(setError(error));
     }
 
-    if (userCity) {
+    if (!userCity) {
         callSetError("Unable to load data from gh-pages")
     }
 
