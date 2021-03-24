@@ -18,6 +18,8 @@ export const CurrentWeather = (props) => {
 
     useEffect(() => {
         callGetUserCurrentWeather(userCity)
+
+        /*Here i've set interval 60s to get actual weather when customer is on site */
         setInterval( () => {
             callGetUserCurrentWeather(userCity)
         }, 600000)

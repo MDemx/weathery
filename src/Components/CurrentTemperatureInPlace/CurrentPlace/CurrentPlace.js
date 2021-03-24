@@ -24,6 +24,9 @@ export const CurrentPlace = (props) => {
     }
 
     if (!userCity && !forecast) {
+        /* If there is no userCity and user forecast from server
+        * it means that server has blocked request and in this case
+        * will be displayed and error*/
         callSetError("Unable to load data from gh-pages")
     }
 

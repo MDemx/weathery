@@ -29,6 +29,7 @@ export const WeekForecastItems = ({dayNum, days}) => {
             {Object.keys(weekForecastData).map( key => {
                 return <WeekForecastItem temperature={weekForecastData[key].temp.day} weatherDescription={weekForecastData[key].weather[0].main}
                                          key={key} day={
+                                             /*Passes the right day the WeekForecastItem component must display*/
                                             (dayNum + parseInt(key)) > (days.length - 1)
                                             ? days[((parseInt(key)) % days.length) - (days.length - dayNum)]
                                             : days[(dayNum + ((parseInt(key)) % days.length))]

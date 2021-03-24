@@ -19,6 +19,7 @@ export const CurrentDayDescription = (props) => {
 
 
     useEffect( () => {
+        /* I've set interval 1s to always display current time*/
         setInterval( () => {
             let today = new Date()
             callSetCurrentDayTime(today)
