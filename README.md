@@ -1,3 +1,9 @@
+This is a simple weather app, where you can see city from where you open the site, current temperature in your city, your current time, day and date and weekly forecast in your city.
+I've done this project to practise with basics of React, Redux. And to practise more with axios and rest APIs. 
+Demo ---> https://maxdemydenko.github.io/weathery/
+
+Project structure on Miro ---> https://miro.com/app/board/o9J_lOjRw0g=/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
