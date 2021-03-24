@@ -6,6 +6,8 @@ When open Weathery please allow browser to use your geolocation. If some informa
 
 Project structure on Miro ---> https://miro.com/app/board/o9J_lOjRw0g=/
 
+New features will be added to this project in process of upgrading my skills.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
