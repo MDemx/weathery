@@ -1,11 +1,29 @@
 import React, {useEffect} from 'react'
 import {WeekForecastItem} from "./WeekForecastItem/WeekForecastItem";
-import s from "./WeekForecastItems.module.css";
 import {useDispatch, useSelector} from "react-redux";
 import {getWeekForecastData} from "../../Selectors/weekForecastSelectors";
 import {getUserCoordsLat, getUserCoordsLon} from "../../Selectors/userLocationSelectors";
 import {getCurrentDay} from "../../Selectors/currentDayTimeSelectors";
 import {getForecast} from "../../redux/forecastReducer";
+import styled from "styled-components"
+
+
+const ForecastItemsWrapper = styled.div`
+    float: right;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    width: 50vh;
+    
+    & h2 {
+        text-align: center;
+        font-size: 1.3em;
+    }
+    
+    @media screen and (max-width: 800px) {
+        min-width: 100%;
+    }
+`
+
 
 export const WeekForecastItems = ({dayNum, days}) => {
 
@@ -23,7 +41,7 @@ export const WeekForecastItems = ({dayNum, days}) => {
         callGetForecast(userCoordLat, userCoordLon, currentDay)
     }, [userCoordLat, userCoordLon, currentDay])
 
-    return <div className={s.forecastItemsWrapper}>
+    return <ForecastItemsWrapper>
         <h2>Weekly forecast</h2>
         <div>
             {Object.keys(weekForecastData).map( key => {
@@ -38,5 +56,5 @@ export const WeekForecastItems = ({dayNum, days}) => {
             } )}
 
         </div>
-    </div>
+    </ForecastItemsWrapper>
 }

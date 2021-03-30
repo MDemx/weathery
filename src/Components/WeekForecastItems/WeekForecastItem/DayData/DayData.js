@@ -1,14 +1,21 @@
 import React from 'react'
-import s from "./DayData.module.css"
-import commonStyles from "../../WeekForecastItems.module.css"
+import styled from "styled-components"
+
+const ForecastItemInfo = styled.div`
+    font-size: 1.1em;
+`
+
+const DayDataWrapper = styled.div`
+    text-align: right;
+`
 
 
 const DayData = React.memo(({day}) => {
-        return <div className={s.dayDataWrapper}>
-            <div className={commonStyles.forecastItemInfo}>
+        return <DayDataWrapper>
+            <ForecastItemInfo>
                 <p>{day}</p>
-            </div>
-        </div>
+            </ForecastItemInfo>
+        </DayDataWrapper>
     }
 )
 

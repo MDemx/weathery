@@ -1,12 +1,21 @@
 import React from 'react'
-import s from "./CurrentWeatherVideo.module.css"
-
-import Clouds from "../../../assets/videos/Clouds.mp4"
-import StarryNight from "../../../assets/videos/Starry night.mp4"
-import Clear from "../../../assets/videos/sunny.mp4"
-import Rain from "../../../assets/videos/Rain.mp4"
+import StarryNight from "../../assets/videos/Starry night.mp4"
+import Clear from "../../assets/videos/sunny.mp4"
 import {useSelector} from "react-redux";
-import {getCurrentTime} from "../../../Selectors/currentDayTimeSelectors";
+import {getCurrentTime} from "../../Selectors/currentDayTimeSelectors";
+import Preloader from "./Preloader/Preloader";
+import styled from "styled-components"
+
+
+const VideoWrapper = styled.video`
+    z-index: -1;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+`
 
 export const CurrentWeatherVideo = ({weather}) => {
 
@@ -18,9 +27,9 @@ export const CurrentWeatherVideo = ({weather}) => {
 
         if ((currentHours >= 19 && currentHours <= 23) || (currentHours >= 0 && currentHours <= 5)) {
             //if it is night will be displayed background with starry sky
-            return <video autoPlay muted loop id={s.myVideo}>
+            return <VideoWrapper autoPlay muted loop>
                 <source src={StarryNight} type="video/mp4"/>
-            </video>
+            </VideoWrapper>
         } else {
             /*if it is day will be displayed background with weather from server.
             * For example in response there is data that it is rainy weather now, so
@@ -32,14 +41,14 @@ export const CurrentWeatherVideo = ({weather}) => {
             * and there is no response and to prevent white background, by default will
             * be displayed this background
             * */
-            return <video autoPlay muted loop id={s.myVideo}>
+            return <VideoWrapper autoPlay muted loop>
                 <source src={Clear} type="video/mp4"/>
                 {/*{weather === "Clouds" && <source src={Clouds} type="video/mp4"/>}
                 {weather === "Clear" && <source src={Clear} type="video/mp4"/>}
                 {weather === "Rain" && <source src={Rain} type="video/mp4"/>}*/}
-            </video>
+            </VideoWrapper>
         }
     } else {
-        return null;
+        return <Preloader/>;
     }
 }

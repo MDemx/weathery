@@ -1,9 +1,27 @@
 import React, {useEffect} from 'react'
-import s from "../CurrentTemperatureInPlace.module.css"
 import {useDispatch, useSelector} from "react-redux";
 import {getCurrentTemperature, getCurrentWeatherDescription} from "../../../Selectors/currentUserWeatherSelectors";
 import {getUserCurrentWeather} from "../../../redux/userCurrentWeatherReducer";
 import {getUserCity} from "../../../Selectors/userLocationSelectors";
+import styled from "styled-components"
+
+const CurrentWeatherInfoWrapper = styled.div`
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 5%;
+`
+
+const CurrentWeatherDescription = styled.p`
+    margin-bottom: 5%;
+    font-size: 1.5em;
+    font-weight: bolder;
+`
+
+const Temperature = styled.p`
+    font-size: 5em;
+    font-weight: bold;
+`
+
 
 export const CurrentWeather = (props) => {
 
@@ -25,8 +43,8 @@ export const CurrentWeather = (props) => {
         }, 600000)
     }, [currentTemperature, userCity])
 
-    return <div className={s.currentWeatherInfoWrapper}>
-        <p className={s.temperature}>{currentTemperature}°C</p>
-        <p className={s.currentWeatherDescription}>{currentWeatherDescription}</p>
-    </div>
+    return <CurrentWeatherInfoWrapper>
+        <Temperature>{currentTemperature}°C</Temperature>
+        <CurrentWeatherDescription>{currentWeatherDescription}</CurrentWeatherDescription>
+    </CurrentWeatherInfoWrapper>
 }

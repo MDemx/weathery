@@ -1,15 +1,25 @@
 import React from 'react'
 import {CurrentWeather} from "./CurrentWeather/CurrentWeather"
 import {CurrentPlace} from "./CurrentPlace/CurrentPlace"
-import s from "./CurrentTemperatureInPlace.module.css"
-import {useSelector} from "react-redux";
-import Preloader from "../common/Preloader/Preloader";
-import {getIsFetching} from "../../Selectors/currentUserWeatherSelectors";
+import styled from "styled-components"
+
+const Wrapper = styled.div`
+    float: left;
+    
+    @media screen and (max-width: 800px) {
+        margin-left: 50%;
+        text-align: center;
+    }
+    
+    @media screen and (max-width: 500px) {
+        margin: 0;
+    }
+`
+
 
 export const CurrentTemperatureInPlace = (props) => {
-
-    return <div className={s.wrapper}>
+    return <Wrapper>
         <CurrentWeather/>
         <CurrentPlace/>
-    </div>
+    </Wrapper>
 }

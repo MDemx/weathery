@@ -1,11 +1,4 @@
-import React, {useEffect} from 'react'
-import {WeekForecastItem} from "./WeekForecastItem/WeekForecastItem";
-import s from "./WeekForecastItems.module.css";
-import {useDispatch, useSelector} from "react-redux";
-import {getWeekForecastData} from "../../Selectors/weekForecastSelectors";
-import {getUserCoordsLat, getUserCoordsLon} from "../../Selectors/userLocationSelectors";
-import {getCurrentDay} from "../../Selectors/currentDayTimeSelectors";
-import {getForecast} from "../../redux/forecastReducer";
+import React from 'react'
 import {WeekForecastItems} from "./WeekForecastItems";
 
 export const WeekForecastItemsContainer = (props) => {

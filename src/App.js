@@ -1,14 +1,18 @@
-import s from './App.module.css';
 import React, {useEffect} from 'react';
-import cn from "classnames";
 import {MainContainer} from "./Components/MainContainer/MainContainer";
 import {useDispatch, useSelector} from "react-redux";
 import {getInitializedStatus} from "./Selectors/appSelectors";
 import {initializeApp} from "./redux/appReducer";
 import Preloader from "./Components/common/Preloader/Preloader";
 import {getCurrentWeatherDescription} from "./Selectors/currentUserWeatherSelectors";
-import {CurrentWeatherVideo} from "./Components/common/CurrentWeatherVideo/CurrentWeatherVideo";
-import {getCurrentTime} from "./Selectors/currentDayTimeSelectors";
+import {CurrentWeatherVideo} from "./Components/common/CurrentWeatherVideo";
+import styled from "styled-components"
+
+
+const Wrapper = styled.div`
+    height: 100vh;
+    width: 100%;
+`
 
 export const App = () => {
 
@@ -29,8 +33,8 @@ export const App = () => {
         return <Preloader/>
     }
 
-    return <div className={cn(s.wrapper, s.wrapperDay)}>
+    return <Wrapper>
         <MainContainer/>
         <CurrentWeatherVideo weather={currentWeatherDescription}/>
-    </div>
+    </Wrapper>
 }

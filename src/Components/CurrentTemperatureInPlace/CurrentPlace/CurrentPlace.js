@@ -1,10 +1,17 @@
 import React, {useEffect} from 'react'
-import s from "../CurrentTemperatureInPlace.module.css"
 import {useDispatch, useSelector} from "react-redux";
 import {getError, getUserCity, getUserCountry} from "../../../Selectors/userLocationSelectors";
 import {getUserCoords, setError} from "../../../redux/userLocationReducer";
 import {ErrorPopUp} from "../../common/ErrorPopUp/ErrorPopUp";
 import {getWeekForecastData} from "../../../Selectors/weekForecastSelectors";
+import styled from "styled-components"
+
+
+const Place = styled.p`
+    font-size: 1.2em;
+    margin-top: -5%;
+`
+
 
 export const CurrentPlace = (props) => {
 
@@ -35,7 +42,7 @@ export const CurrentPlace = (props) => {
     }, [userCity, userCountry])
 
     return <div>
-        <p className={s.place}>{userCity}, {userCountry}</p>
+        <Place>{userCity}, {userCountry}</Place>
         {(error && error.length > 0) &&
             <ErrorPopUp errorText={error}/>
         }

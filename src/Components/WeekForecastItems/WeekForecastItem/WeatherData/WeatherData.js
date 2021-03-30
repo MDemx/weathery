@@ -1,15 +1,24 @@
 import React from 'react'
-import s from "./WeatherData.module.css"
-import commonStyles from "../../WeekForecastItems.module.css"
-import cn from "classnames"
+import styled from "styled-components"
+
+
+const Temperature = styled.div`
+    font-weight: bold;
+    font-size: 1.5em;
+`
+
+const WeatherDescription = styled.div`
+    font-size: 0.9em;
+`
+
 
 export const WeatherData = ({temperature, weatherDescription}) => {
-    return <div className={s.weatherDataWrapper}>
-        <div className={cn(commonStyles.forecastItemInfo, s.temperature)}>
+    return <div>
+        <Temperature>
             <p>{temperature}°C</p>
-        </div>
-        <div className={cn(commonStyles.forecastItemInfo, s.weatherDescription)}>
+        </Temperature>
+        <WeatherDescription>
             <p>{weatherDescription}</p>
-        </div>
+        </WeatherDescription>
     </div>
 }

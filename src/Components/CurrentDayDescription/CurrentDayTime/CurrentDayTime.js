@@ -1,9 +1,22 @@
 import React from 'react'
-import s from "./CurrentDayTime.module.css"
+import styled from "styled-components"
+
+
+const Wrapper = styled.div`
+    display: flex;
+    font-size: 1.8em;
+`
+
+const Day = styled.p`
+    &:after {
+        content: "/";
+        padding-left: 5%;
+    }
+`
 
 export const CurrentDayTime = (props) => {
-    return <div className={s.wrapper}>
-        <p className={s.day}>{props.day}</p>
-        <p className={s.time}>{props.time}</p>
-    </div>
+    return <Wrapper>
+        <Day>{props.day}</Day>
+        <p>{props.time}</p>
+    </Wrapper>
 }

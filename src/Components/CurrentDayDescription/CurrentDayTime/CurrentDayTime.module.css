@@ -1,9 +1,0 @@
-.wrapper {
-    display: flex;
-    font-size: 1.8em;
-}
-
-.day:after {
-    content: "/";
-    padding-left: 5%;
-}
