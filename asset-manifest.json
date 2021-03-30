@@ -1,28 +1,26 @@
 {
   "files": {
-    "main.css": "/weathery/static/css/main.db848101.chunk.css",
-    "main.js": "/weathery/static/js/main.0e05083b.chunk.js",
-    "main.js.map": "/weathery/static/js/main.0e05083b.chunk.js.map",
-    "runtime-main.js": "/weathery/static/js/runtime-main.3b2e5c51.js",
-    "runtime-main.js.map": "/weathery/static/js/runtime-main.3b2e5c51.js.map",
-    "static/js/2.2f5d76b6.chunk.js": "/weathery/static/js/2.2f5d76b6.chunk.js",
-    "static/js/2.2f5d76b6.chunk.js.map": "/weathery/static/js/2.2f5d76b6.chunk.js.map",
-    "static/js/3.8546feea.chunk.js": "/weathery/static/js/3.8546feea.chunk.js",
-    "static/js/3.8546feea.chunk.js.map": "/weathery/static/js/3.8546feea.chunk.js.map",
+    "main.css": "/weathery/static/css/main.3a59ca3d.chunk.css",
+    "main.js": "/weathery/static/js/main.7280a851.chunk.js",
+    "main.js.map": "/weathery/static/js/main.7280a851.chunk.js.map",
+    "runtime-main.js": "/weathery/static/js/runtime-main.36c29f00.js",
+    "runtime-main.js.map": "/weathery/static/js/runtime-main.36c29f00.js.map",
+    "static/js/2.43e98834.chunk.js": "/weathery/static/js/2.43e98834.chunk.js",
+    "static/js/2.43e98834.chunk.js.map": "/weathery/static/js/2.43e98834.chunk.js.map",
+    "static/js/3.188eb411.chunk.js": "/weathery/static/js/3.188eb411.chunk.js",
+    "static/js/3.188eb411.chunk.js.map": "/weathery/static/js/3.188eb411.chunk.js.map",
     "index.html": "/weathery/index.html",
-    "static/css/main.db848101.chunk.css.map": "/weathery/static/css/main.db848101.chunk.css.map",
-    "static/js/2.2f5d76b6.chunk.js.LICENSE.txt": "/weathery/static/js/2.2f5d76b6.chunk.js.LICENSE.txt",
-    "static/media/Clouds.fd064f2a.mp4": "/weathery/static/media/Clouds.fd064f2a.mp4",
-    "static/media/Rain.e0606565.mp4": "/weathery/static/media/Rain.e0606565.mp4",
+    "static/css/main.3a59ca3d.chunk.css.map": "/weathery/static/css/main.3a59ca3d.chunk.css.map",
+    "static/js/2.43e98834.chunk.js.LICENSE.txt": "/weathery/static/js/2.43e98834.chunk.js.LICENSE.txt",
     "static/media/Starry night.4bb8814b.mp4": "/weathery/static/media/Starry night.4bb8814b.mp4",
     "static/media/logo.59a0a5e4.png": "/weathery/static/media/logo.59a0a5e4.png",
     "static/media/preloader.56be47e5.svg": "/weathery/static/media/preloader.56be47e5.svg",
     "static/media/sunny.4522a3f2.mp4": "/weathery/static/media/sunny.4522a3f2.mp4"
   },
   "entrypoints": [
-    "static/js/runtime-main.3b2e5c51.js",
-    "static/js/2.2f5d76b6.chunk.js",
-    "static/css/main.db848101.chunk.css",
-    "static/js/main.0e05083b.chunk.js"
+    "static/js/runtime-main.36c29f00.js",
+    "static/js/2.43e98834.chunk.js",
+    "static/css/main.3a59ca3d.chunk.css",
+    "static/js/main.7280a851.chunk.js"
   ]
 }
