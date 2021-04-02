@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react'
 import {useDispatch, useSelector} from "react-redux";
 import {getCurrentTemperature, getCurrentWeatherDescription} from "../../../Selectors/currentUserWeatherSelectors";
-import {getUserCurrentWeather} from "../../../redux/userCurrentWeatherReducer";
 import {getUserCity} from "../../../Selectors/userLocationSelectors";
 import styled from "styled-components"
+import {getUserCurrentWeather} from "../../../Reducers/userCurrentWeatherReducer";
 
 const CurrentWeatherInfoWrapper = styled.div`
     display: flex;

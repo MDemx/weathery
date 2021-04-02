@@ -1,10 +1,10 @@
 import {applyMiddleware, combineReducers, compose, createStore} from "redux";
 import thunkMiddleware from "redux-thunk";
-import {userLocationReducer} from "./userLocationReducer";
-import {userCurrentWeatherReducer} from "./userCurrentWeatherReducer";
-import {appReducer} from "./appReducer";
-import {currentDayTimeReducer} from "./currentDayTimeReducer";
-import {forecastReducer} from "./forecastReducer";
+import {userLocationReducer} from "./Reducers/userLocationReducer";
+import {userCurrentWeatherReducer} from "./Reducers/userCurrentWeatherReducer";
+import {appReducer} from "./Reducers/appReducer";
+import {currentDayTimeReducer} from "./Reducers/currentDayTimeReducer";
+import {forecastReducer} from "./Reducers/forecastReducer";
 
 let reducers = combineReducers({
     userLocation: userLocationReducer,

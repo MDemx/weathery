@@ -2,16 +2,16 @@ import React, {useEffect} from 'react';
 import {MainContainer} from "./Components/MainContainer/MainContainer";
 import {useDispatch, useSelector} from "react-redux";
 import {getInitializedStatus} from "./Selectors/appSelectors";
-import {initializeApp} from "./redux/appReducer";
 import Preloader from "./Components/common/Preloader/Preloader";
 import {getCurrentWeatherDescription} from "./Selectors/currentUserWeatherSelectors";
 import {CurrentWeatherVideo} from "./Components/common/CurrentWeatherVideo";
 import styled from "styled-components"
+import {initializeApp} from "./Reducers/appReducer";
 
 
 const Wrapper = styled.div`
     height: 100vh;
-    width: 100%;
+    max-width: 100vw;
 `
 
 export const App = () => {

@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react'
 import {useDispatch, useSelector} from "react-redux";
 import {getError, getUserCity, getUserCountry} from "../../../Selectors/userLocationSelectors";
-import {getUserCoords, setError} from "../../../redux/userLocationReducer";
 import {ErrorPopUp} from "../../common/ErrorPopUp/ErrorPopUp";
 import {getWeekForecastData} from "../../../Selectors/weekForecastSelectors";
 import styled from "styled-components"
+import {getUserCoords, setError} from "../../../Reducers/userLocationReducer";
 
 
 const Place = styled.p`

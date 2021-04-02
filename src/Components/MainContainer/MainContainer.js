@@ -11,6 +11,12 @@ const Wrapper = styled.div`
     & * {
         color: white;
     }
+    
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+        
+        
+    }
 `
 
 const LeftContentWrapper = styled.div`

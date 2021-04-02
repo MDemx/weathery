@@ -2,8 +2,8 @@ import React, {useEffect} from 'react'
 import {CurrentDate} from "./CurrentDate/CurrentDate"
 import {CurrentDayTime} from "./CurrentDayTime/CurrentDayTime"
 import {useDispatch, useSelector} from "react-redux";
-import {setCurrentDayTime} from "../../redux/currentDayTimeReducer";
 import {getCurrentDate, getCurrentDay, getCurrentTime} from "../../Selectors/currentDayTimeSelectors";
+import {setCurrentDayTime} from "../../Reducers/currentDayTimeReducer";
 
 export const CurrentDayDescription = (props) => {
 

@@ -4,8 +4,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {getWeekForecastData} from "../../Selectors/weekForecastSelectors";
 import {getUserCoordsLat, getUserCoordsLon} from "../../Selectors/userLocationSelectors";
 import {getCurrentDay} from "../../Selectors/currentDayTimeSelectors";
-import {getForecast} from "../../redux/forecastReducer";
 import styled from "styled-components"
+import {getForecast} from "../../Reducers/forecastReducer";
 
 
 const ForecastItemsWrapper = styled.div`
@@ -15,13 +15,14 @@ const ForecastItemsWrapper = styled.div`
     width: 50vh;
     
     & h2 {
-        text-align: center;
+        text-align: center; 
         font-size: 1.3em;
     }
     
     @media screen and (max-width: 800px) {
         min-width: 100%;
     }
+    
 `
 
 

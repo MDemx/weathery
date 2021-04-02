@@ -17,6 +17,11 @@ const ForecastWrapper = styled.div`
     & p {
         margin: 5px;
     }
+    
+    @media screen and (max-width: 500px) {
+        justify-content: space-around;
+        font-size: 1.1em;
+    }
 `
 
 
